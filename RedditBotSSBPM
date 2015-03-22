@@ -1,0 +1,30 @@
+#JavaScript
+import praw
+import time
+
+r = praw.Reddit(user_agent = "first TestBot created")
+print("Logging in...")
+r.login()
+
+search = ["ssb", "ssbm", "ssbpm", "project m", "gimir", "gods", "god"]
+cache = []
+
+def run_bot():
+	print("Loading subreddit!")
+	subreddit = r.get_subreddit("test")
+	print("Snatching Comments!")
+	comments = subreddit.get_comments(limit = 25)
+	for comment in comments:
+		comment_text = comment.body.lower()
+		isMatch = any(string in comment_text for string in search)
+		if comment.id not in cache and isMatch:
+			print("Match found! Comment id: " + comment.id)
+			comment.reply("Check out /r/SSBPM!")
+			print("Finished replying!")
+			cache.append(comment.id)
+			print("Restarting search...")
+
+while True:
+	run_bot()
+	time.sleep(10)
+
