@@ -1,6 +1,6 @@
 #JavaScript
 import praw
-import time
+import time 
 
 r = praw.Reddit(user_agent = "first TestBot created")
 print("Logging in...")
@@ -27,4 +27,5 @@ def run_bot():
 while True:
 	run_bot()
 	time.sleep(10)
+
 
