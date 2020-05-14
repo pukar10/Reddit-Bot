@@ -1,8 +1,13 @@
 # Bots
-RedditBotSSBPM - JavaScript
+RedditBotSSBPM - JavaScript 
 
+## Description
 Very simple javaScript bot
+program will load 25 posts from reddit and reply to only the ones with the specifed keyword. 
+After the post has been replied to it will be placed in a cache so duplicate posts will not occur. 
 
+
+## Approach
 Interacts with Reddit API
 1. Logs into Reddit 
 2. Searches for provided keywords in reddit posts.
@@ -10,5 +15,3 @@ Interacts with Reddit API
 4. Place post into cache
 5. DONE!
 
-program will load 25 posts from reddit and reply to only the ones with the specifed keyword. 
-After the post has been replied to it will be placed in a cache so duplicate posts will not occur. 
