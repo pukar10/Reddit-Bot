@@ -1,11 +1,9 @@
-# Bots
-RedditBotSSBPM - JavaScript 
+# Reddit-bot
+Javascript webscrapper
 
 ## Description
-Very simple javaScript bot
 program will load 25 posts from reddit and reply to only the ones with the specifed keyword. 
 After the post has been replied to it will be placed in a cache so duplicate posts will not occur. 
-
 
 ## Approach
 Interacts with Reddit API
